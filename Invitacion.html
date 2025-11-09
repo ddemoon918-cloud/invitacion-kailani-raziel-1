@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitación — Presentación de Kailani Azul & Raziel Abisai</title>
+  <style>
+  .invite {
+  position:relative;
+}
+
+.invite::before,
+.invite::after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:130px;
+  opacity:0.22;
+  background:url('https://purepng.com/public/uploads/large/purepng.com-blossom-flowerflower-pink-blossom-flower-961524680272u0zbu.png') no-repeat center/contain;
+  pointer-events:none;
+}
+
+.invite::before {
+  left:-60px;
+  transform:rotate(-12deg);
+}
+
+.invite::after {
+  right:-60px;
+  transform:rotate(12deg);
+}
+
+/* Para pantallas pequeñas, reducir flores */
+@media(max-width:900px){
+  .invite::before,
+  .invite::after{
+    opacity:0.16;
+    width:80px;
+    left:-40px;
+    right:-40px;
+  }
+}
+    :root{
+      --bg:#ffffff; --gold:#b99258; --muted:#7b6b5a; --card:#fffaf6;
+      --maxw:980px; --pad:20px;
+      font-family: 'Segoe UI', Roboto, system-ui, Arial;
+    }
+
+    /* Animación de aparición */
+    body{
+      background:linear-gradient(180deg,#ffffff 0%, #fffefc 100%);
+      color:#2b2b2b; margin:0; padding:40px 16px;
+      display:flex; justify-content:center; position:relative;
+      opacity:0;
+      animation:fadeIn 1.4s ease-out forwards;
+    }
+    @keyframes fadeIn{
+      from{opacity:0;} to{opacity:1;}
+    }
+
+    body::before, body::after{
+      content:"";
+      position:absolute; width:220px; height:220px; opacity:0.22;
+      background:url('https://purepng.com/public/uploads/large/purepng.com-blossom-flowerflower-pink-blossom-flower-961524680272u0zbu.png') no-repeat center/contain;
+      pointer-events:none;
+    }
+
+    body::before{ top:0; left:0; transform:rotate(-12deg); }
+    body::after{ bottom:0; right:0; transform:rotate(14deg); }
+
+    .invite{max-width:var(--maxw); width:100%; background:var(--card); border-radius:16px; 
+      box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; border:1px solid rgba(185,150,90,0.12)}
+
+    header{background:linear-gradient(90deg, rgba(185,150,90,0.06), rgba(185,150,90,0.02)); 
+      padding:28px 28px 18px; position:relative}
+
+    .title{display:flex; gap:18px; align-items:center}
+
+    .crest{width:84px; height:84px; border-radius:12px; display:flex; align-items:center; justify-content:center; 
+      background:linear-gradient(135deg,var(--gold),#f6e6c7); box-shadow:0 6px 18px rgba(185,150,90,0.12); 
+      font-weight:700; color:#fff}
+
+    h1{margin:0; font-size:20px; letter-spacing:0.6px; color:var(--muted)}
+    h2{margin:6px 0 0; font-size:28px; color:#111; font-weight:600}
+
+    main{padding:24px; display:grid; grid-template-columns:1fr 360px; gap:22px}
+
+    .left{padding-right:6px}
+
+    .lead{background:linear-gradient(180deg,rgba(185,150,90,0.03),transparent); border-radius:12px; padding:18px;
+      border:1px solid rgba(185,150,90,0.06)}
+
+    .info{margin-top:14px; display:grid; gap:10px}
+
+    .row{display:flex; gap:12px; align-items:center}
+    .label{min-width:110px; color:var(--muted); font-weight:600}
+    .value{flex:1; color:#222}
+
+    .btn-link{background:var(--gold); color:#fff; padding:6px 10px; border-radius:8px; text-decoration:none; font-size:13px; font-weight:600;}
+
+    .gallery{display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-top:16px}
+    .gallery img{width:100%; height:160px; object-fit:cover; border-radius:10px; border:1px solid rgba(0,0,0,0.04)}
+
+    .music{margin-top:14px; display:flex; gap:10px; align-items:center}
+
+    .map-wrap{padding:18px; border-radius:12px; background:linear-gradient(180deg,#fff,#fffaf2); 
+      border:1px solid rgba(185,150,90,0.06)}
+
+    aside{padding:24px}
+
+    .card{background:linear-gradient(180deg,#fff,#fffcf8); border-radius:12px; padding:14px; 
+      border:1px solid rgba(185,150,90,0.06)}
+
+    .cta{margin-top:14px; display:flex; gap:10px}
+
+    .btn{padding:10px 14px; border-radius:10px; border:none; background:var(--gold); color:#fff; font-weight:700; cursor:pointer; text-decoration:none}
+    .mutebtn{background:transparent; color:var(--muted); border:1px solid rgba(43,43,43,0.06)}
+
+    footer{padding:16px 24px; text-align:center; color:var(--muted); font-size:13px}
+
+    @media (max-width:900px){
+      main{grid-template-columns:1fr;}
+      .gallery img{height:140px}
+      .crest{width:68px; height:68px}
+    }
+  </style>
+</head>
+<body>
+  <div class="invite" id="invite">
+    <header>
+      <div class="title">
+        <div class="crest">K&R</div>
+        <div>
+          <h1>Te invitamos a la presentación</h1>
+          <h2>Kailani Azul & Raziel Abisai</h2>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="left">
+        <div class="lead">
+          <p>Con alegría invitamos a familiares y amigos a la presentación de <strong>Kailani Azul</strong> y <strong>Raziel Abisai</strong>. Acompáñanos en la misa y la recepción para celebrar este día tan especial.</p>
+
+          <div class="info">
+            <div class="row"><div class="label">Misa</div><div class="value">Parroquia de Cristo Rey — <strong>Llegar 3:45 PM (misa 4:00 PM)</strong></div></div>
+            <a class="btn-link" href="https://www.google.com/maps/search/Iglesia+Cristo+Rey/@19.6821347,-99.0858133,17z" target="_blank">Ver en Maps</a>
+
+            <div class="row"><div class="label">Recepción</div><div class="value"><strong>Calle Fresno, Condominio G, Unidad Habitacional La Isla, Prados Tultitlán</strong></div></div>
+            <a class="btn-link" href="https://www.google.com/maps?q=Calle%20Fresno%20Condominio%20G%20Unidad%20Habitacional%20La%20Isla%20Prados%20Tultitlan" target="_blank">Ver en Maps</a>
+
+            <div class="row"><div class="label">Papás</div><div class="value">Arturo Quintana Hernández & Blanca Estela Alba Martínez</div></div>
+            <div class="row"><div class="label">Padrinos</div><div class="value">Kailani: Julio César Quintana Hernández & Paola Chávez Luna — Raziel: Juan Eduardo Alba Hernández & Laura Matea Martínez Mireles</div></div>
+          </div>
+
+          <div class="gallery">
+            <img src="foto1.jpg">
+            <img src="foto2.jpg">
+            <img src="foto3.jpg">
+            <img src="foto4.jpg">
+          </div>
+
+<div style="margin-top:14px;">
+  <label style="font-weight:600;color:var(--muted);margin-bottom:6px;display:block;">Música</label>
+  <audio id="music" controls autoplay>
+    <source src="audio.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+    <script>
+document.addEventListener("click", function() {
+  const audio = document.getElementById("music");
+  audio.play().catch(()=>{});
+}, { once:true });
+</script>
+</div>
+
+
+        </div>
+
+        <div class="map-wrap" style="margin-top:14px">
+          <h3 style="margin:0 0 10px;color:var(--muted)">Cómo llegar — Recepción</h3>
+          <iframe width="100%" height="260" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Calle%20Fresno%20Condominio%20G%20Unidad%20Habitacional%20La%20Isla%20Prados%20Tultitlan&output=embed" allowfullscreen></iframe>
+        </div>
+
+        <div class="map-wrap" style="margin-top:14px">
+          <h3 style="margin:0 0 10px;color:var(--muted)">Cómo llegar — Misa</h3>
+          <iframe width="100%" height="260" frameborder="0" style="border:0" 
+            src="https://www.google.com/maps?q=Iglesia+Cristo+Rey+Tultitlan&output=embed" allowfullscreen></iframe>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <h4 style="margin:0;color:#2b2b2b">Detalles rápidos</h4>
+          <p style="margin:0;color:var(--muted);font-size:14px">Fecha: <strong>Sábado 27 de diciembre</strong> del 2025</p>
+          <div class="cta">
+            <a class="btn" href="#invite" onclick="window.print()">Imprimir invitación</a>
+            <a class="mutebtn" href="mailto:?subject=Invitación">Compartir</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Invitación creada para: Kailani Azul & Raziel Abisai</small>
+    </footer>
+
+  </div>
+
+
+</body>
+</html>
